@@ -1,0 +1,59 @@
+body{
+    background-image:url("projet2.jpg");
+    width: 1500px;
+    border: 3px solid black;
+    margin: 0 auto;
+    padding : 20px 20px 20px 20px 20px
+    
+}
+
+.logo{
+    margin-top: initial;
+}
+div{
+    margin : 5%
+}
+
+
+h1{
+    text-align: center;
+    background-color: green;
+    font-size: 40px;
+}
+h3{
+    text-align: center;
+    background-color: green;
+}
+
+.cn{
+    text-align: center;
+    background-color: aquamarine;
+    text-align-last: center;
+}
+
+
+
+.container{
+    background-color : green;
+    display: inline-flex;
+    flex-flow:  row nowrap;
+}
+
+.item{
+    background-color: white;
+    padding : 20px;
+    margin : 5px;
+}
+.style1{
+    /*line-height: 1;*/
+    padding: 20px 34px;
+     text-align: center;
+     color: black;
+     background-color: yellow;
+     border-radius: 10px;
+     text-shadow: 1px 1px 1px;
+     position: relative;
+     left:50%;
+     cursor: pointer;
+     display: inline-block;
+}

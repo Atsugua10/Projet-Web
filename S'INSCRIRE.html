@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <head>
+
+        <meta charset = "utf-8">  
+        <link rel="stylesheet" href="style_s'inscrire.css">
+        <link rel="stylesheet" href="style_connexion.css"> 
+    
+        <title>REJOIGNEZ-NOUS</title>
+
+    </head>
+
+
+    <header > 
+        <img class="logo" src="logo.jpeg" alt="mon logo" height="150" width="180"  Align="left" Align="on top">
+    </header> 
+    <body>
+         
+        <div class="container">
+            <div class="item"><a href="Accueil.html">Accueil</a></div>
+            <div class="item"><a href="Connexion.html">Connexion</a></div>
+            <div class="item"><a href="services.html">services</a></div>
+            <div class="item"><a href="A_propos_de_nous.html">A propos</a></div>
+        </div> 
+
+        <h1>S'INSCRIRE</h1>
+
+        <form action="/mon-formulaire" method = "post">
+            
+        <div>
+            <label for="nom"><b>Nom : </b></label><br>            
+             <input type="text" id="nom" name="nom_d_utilisateur"><br>
+        
+              <label for= "Prenom"><br> <b>prenom :</b></label><br>
+              <input type="text" id="prenom" name="prenom_d_utlisateur"><br>
+        
+            <label for="Adresse mail"><br><b>Email: </b> </label><br>
+            <input type="email" id="email"  pattern=".+@gmail\.com" size="30" required><br><br>
+        
+            <label for="numero de telephone"><b>Numero de telephone : </b></label><br>            
+             <input type="tel" id="tel" name="telephone"><br>
+
+             <label for="Mode d'enseignement"><br> <b>Mode d'enseignement:</b> </label>
+             <select>
+                <option> A domicile</option>
+                <option> En centre</option>
+            </select><br>
+
+            <label for="Langue choisie"> <br> <b> Langue choisie:</b></label>
+            <input type="radio"  id="engl" name="english" >
+            <label for="Anglais"> Anglais</label>
+            <input type="radio"  id="fr" name= "French">
+            <label for="Francais"> Francais</label>
+        
+
+            <br><br><br>
+            <h2><b> MES PREFERENCES</b></h2>
+
+            <label for="Niveau"> <br> <b> Niveau : </b></label>
+            <select> 
+                <option>L1 </option>
+                <option>L2 </option>
+                <option>L3 </option>
+            </select><br>
+
+            <label for="Matieres"><br> <b> Choix des cours a suivre:</b></label><br>
+            <input type="checkbox"  id="alg" name="algebre" >
+            <label for="Algebre"> Algebre</label>
+            <br>
+            <input type="checkbox"  id="ana" name="analyse" >
+            <label for="Analyse"> Analyse</label>
+            <br>
+            <input type="checkbox"  id="Geo" name="geometrie" >
+            <label for="Geometrie"> Geometrie</label>
+            <br>
+            <input type="checkbox"  id="proba" name="probabilite" >
+            <label for="probabilite"> Probabilite</label>
+            <br>
+            <input type="checkbox"  id="stat" name="statistique" >
+            <label for="Statistique"> Statistique</label>
+            <br>
+            <input type="checkbox"  id="cript" name="cripto" >
+            <label for="Criptographie"> Criptographie</label>
+            <br>
+
+
+            <br>
+            <button type="submit">
+                <strong> Ajouter</strong>
+            </button>
+            <button type="reset">
+                <strong> Annuler</strong>
+            </button>
+        </div>
+    </form>
+</body>
