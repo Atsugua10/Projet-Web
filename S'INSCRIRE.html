@@ -1,12 +1,12 @@
 <!DOCTYPE html>
     <head>
-
-        <meta charset = "utf-8">  
+         <title>REJOIGNEZ-NOUS</title>
+        <meta charset="utf-8">
+        
         <link rel="stylesheet" href="style_s'inscrire.css">
         <link rel="stylesheet" href="style_connexion.css"> 
-    
-        <title>REJOIGNEZ-NOUS</title>
-
+       
+       <meta name="viewport" content="width=device-width">
     </head>
 
 
@@ -14,8 +14,8 @@
         <img class="logo" src="logo.jpeg" alt="mon logo" height="150" width="180"  Align="left" Align="on top">
     </header> 
     <body>
-         
-        <div class="container">
+       
+        <div class="container1">
             <div class="item"><a href="Accueil.html">Accueil</a></div>
             <div class="item"><a href="Connexion.html">Connexion</a></div>
             <div class="item"><a href="services.html">services</a></div>
@@ -24,45 +24,50 @@
 
         <h1>S'INSCRIRE</h1>
 
-        <form action="/mon-formulaire" method = "post">
+      <form action="/mon-formulaire" method = "post">
+             <!-- <h2><strong> Veuillez remplir ce formulaire pour creer un compte</strong></h2>-->
+             
+     <header>
+        <form name="inscription" action="#" class="box" id="formulaire d'inscription" onsubmit="return false">  
             
-        <div>
-            <label for="nom"><b>Nom : </b></label><br>            
-             <input type="text" id="nom" name="nom_d_utilisateur"><br>
-        
-              <label for= "Prenom"><br> <b>prenom :</b></label><br>
-              <input type="text" id="prenom" name="prenom_d_utlisateur"><br>
-        
-            <label for="Adresse mail"><br><b>Email: </b> </label><br>
-            <input type="email" id="email"  pattern=".+@gmail\.com" size="30" required><br><br>
-        
-            <label for="numero de telephone"><b>Numero de telephone : </b></label><br>            
-             <input type="tel" id="tel" name="telephone"><br>
+             <h3><strong>Coordonnées</strong></h3>
+             
 
-             <label for="Mode d'enseignement"><br> <b>Mode d'enseignement:</b> </label>
-             <select>
-                <option> A domicile</option>
-                <option> En centre</option>
-            </select><br>
+                 <input type="text" name="nom" placeholder="Nom" required><br><br>
 
-            <label for="Langue choisie"> <br> <b> Langue choisie:</b></label>
-            <input type="radio"  id="engl" name="english" >
-            <label for="Anglais"> Anglais</label>
-            <input type="radio"  id="fr" name= "French">
-            <label for="Francais"> Francais</label>
+                <input type="text" name="prenom" placeholder="Prenom" required><br><br>
+            
+                <input type="email" name="email" placeholder="Email" required><br><br>
+
+                <input type="tel" name="te" placeholder="Telephone" required><br><br>
+             
+
+             <strong>Lieu d'enseignement:</b></strong>
+
+                     <select name="Lieu" size=1>
+                         <option> A domicile
+                         <option> En centre
+                    </select>
+                
+             <br><br>
+            <strong>Langue choisie:</strong>
+            
+               <input type="radio"  id="engl" name="english" >Anglais
+                <input type="radio"  id="fr" name= "French">Francais
+            
         
 
             <br><br><br>
-            <h2><b> MES PREFERENCES</b></h2>
+            <h2><b><strong>MES PREFERENCES</strong> </b></h2>
 
-            <label for="Niveau"> <br> <b> Niveau : </b></label>
+            <label for="Niveau"> <br> <b><strong>Niveau :</strong>  </b></label>
             <select> 
                 <option>L1 </option>
                 <option>L2 </option>
                 <option>L3 </option>
             </select><br>
 
-            <label for="Matieres"><br> <b> Choix des cours a suivre:</b></label><br>
+            <label for="Matieres"><br> <b> <strong>Choix des cours a suivre:</strong></b></label><br>
             <input type="checkbox"  id="alg" name="algebre" >
             <label for="Algebre"> Algebre</label>
             <br>
@@ -84,12 +89,124 @@
 
 
             <br>
-            <button type="submit">
-                <strong> Ajouter</strong>
-            </button>
-            <button type="reset">
-                <strong> Annuler</strong>
-            </button>
-        </div>
+            <p> 
+                <button type="submit" class="btn" onclick="ajouter()">Ajouter</button>
+                <button type="button" class="btn"  onclick="supprimer()">Supprimer</button>
+                <button type="reset"  class="btn" onclick="annuler()">Annuler</button>
+                <br><br>
+                <!--<button type="button" class="btn"  onclick="afficherDate()">Date et Heure</button> -->
+            
     </form>
+ </header>
+ <main>
+    <div class="box">
+         
+        <table class="datatable">
+        <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Email</th>
+              <th>Telephone</th>
+              <th>Niveau</th>
+              <th>Cours choisi</th>
+            </tr>
+        </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+</main>
+<script>
+
+var MesInformations = document.forms.newCommand; 
+
+
+function ajouter(){
+//alert(newCommandForm.elements.prenom.value)
+
+console.log(MesInformations.elements.nom.value)
+console.log(MesInformations.elements.adresse.value)
+
+const newItem = document.createElement('tr')
+const nomTd = document.createElement('td')
+const prenomTd = document.createElement('td')
+const emailTd = document.createElement('td')
+const telephoneTd = document.createElement('td')
+const niveauTd = document.createElement('td')
+const cours_choisiTd = document.createElement('td')
+
+nomTd.textContent = document.MesInformations.nom.value
+prenomTd.textContent = document.MesInformations.prenom.value
+emailTd.textContent = document.MesInformations.email.value
+telephoneTd.textContent = document.MesInformations.telephone.value
+niveauId.textContent = document.MesInformations.niveau.value
+cours_choisiId.textContent = document.MesInformations.cours_choisi.value
+
+//const selectEntree = document.getElementById("entreeId");
+//const valeurselectionnee = selectEntree.options[selectEntree.selectedIndex].value;
+//const textselectionne = selectEntree.options[selectEntree.selectedIndex].text;
+
+console.log(entreeTd.textContent)
+console.log(platTd.textContent)
+console.log(desserTd.textContent)
+
+/*Ex2)3)vii)   */
+
+if (!document.newCommand.nom.checkValidity() ||
+      !document.newCommand.prenom.checkValidity() ||
+      !document.newCommand.adresse.checkValidity() ||
+      !document.newCommand.email.checkValidity()
+     ) {
+           return
+    }
+
+// Ex2)3)iv)
+//const table = document.querySelector('table')
+newItem.append(nomTd, adresseTd, modeLivraisonTd, entreeTd, platTd, desserTd)
+
+ /* le premier élément dans le document qui contient la classe "datatable" est retourné*/
+const table = document.querySelector('.datatable tbody')
+/*  Ex2)3)vi) */
+table.appendChild(newItem)
+
+}
+
+// supprimer toutes les lignes du tableau
+//ex2)3)viii)
+function supprimer() {
+    const tbody = document.querySelector('.datatable tbody' )
+    while (tbody.firstChild) {
+      tbody.removeChild(tbody.firstChild)
+    }
+
+}
+
+
+
+function pause(ms) 
+{
+return new Promise(resolve => setTimeout(resolve, ms));
+}
+//afficherDate();
+
+async function afficherDate() 
+{
+while(true) 
+{
+await pause(1);
+var cejour = new Date();
+var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+var date = cejour.toLocaleDateString("fr-FR", options);
+var heure = ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+var dateheure = date + " " + heure;
+var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+document.getElementById('dateheure').innerHTML = dateheure;
+}
+}
+
+</script>
+
+
 </body>
