@@ -22,12 +22,13 @@
             <div class="item"><a href="A_propos_de_nous.html">A propos</a></div>
         </div> 
 
-        <h1>S'INSCRIRE</h1>
-
-      <form action="/mon-formulaire" method = "post">
-             <!-- <h2><strong> Veuillez remplir ce formulaire pour creer un compte</strong></h2>-->
-             
+        
+            
      <header>
+          <!-- <h2><strong> Veuillez remplir ce formulaire pour creer un compte</strong></h2>-->
+             
+         <h1>S'INSCRIRE</h1>
+
         <form name="inscription" action="#" class="box" id="formulaire d'inscription" onsubmit="return false">  
             
              <h3><strong>Coordonnées</strong></h3>
@@ -50,12 +51,12 @@
                     </select>
                 
              <br><br>
-            <strong>Langue choisie:</strong>
             
-               <input type="radio"  id="engl" name="english" >Anglais
-                <input type="radio"  id="fr" name= "French">Francais
-            
-        
+                <strong>Langue choisie</strong>
+              
+                    <input type="radio" name="paiement">Anglais
+                    <input type="radio" name="paiement">Francais
+             
 
             <br><br><br>
             <h2><b><strong>MES PREFERENCES</strong> </b></h2>
@@ -109,7 +110,7 @@
               <th>Email</th>
               <th>Telephone</th>
               <th>Niveau</th>
-              <th>Cours choisi</th>
+              <th>Cours</th>
             </tr>
         </thead>
           <tbody>
@@ -120,14 +121,14 @@
 </main>
 <script>
 
-var MesInformations = document.forms.newCommand; 
+var inscriptionForm = document.forms.inscription; 
 
 
 function ajouter(){
 //alert(newCommandForm.elements.prenom.value)
 
-console.log(MesInformations.elements.nom.value)
-console.log(MesInformations.elements.adresse.value)
+console.log(inscriptionForm.elements.nom.value)
+console.log(inscriptionForm.elements.adresse.value)
 
 const newItem = document.createElement('tr')
 const nomTd = document.createElement('td')
@@ -135,46 +136,42 @@ const prenomTd = document.createElement('td')
 const emailTd = document.createElement('td')
 const telephoneTd = document.createElement('td')
 const niveauTd = document.createElement('td')
-const cours_choisiTd = document.createElement('td')
+const coursTd = document.createElement('td')
 
-nomTd.textContent = document.MesInformations.nom.value
-prenomTd.textContent = document.MesInformations.prenom.value
-emailTd.textContent = document.MesInformations.email.value
-telephoneTd.textContent = document.MesInformations.telephone.value
-niveauId.textContent = document.MesInformations.niveau.value
-cours_choisiId.textContent = document.MesInformations.cours_choisi.value
+nomTd.textContent = document.inscription.nom.value
+prenomTd.textContent = document.inscription.prenom.value
+emailTd.textContent = document.inscription.email.value
+telephoneTd.textContent = document.inscription.telephone.value
+niveauId.textContent = document.inscription.niveau.value
+cours_choisiId.textContent = document.inscription.cours_choisi.value
 
 //const selectEntree = document.getElementById("entreeId");
 //const valeurselectionnee = selectEntree.options[selectEntree.selectedIndex].value;
 //const textselectionne = selectEntree.options[selectEntree.selectedIndex].text;
 
-console.log(entreeTd.textContent)
-console.log(platTd.textContent)
-console.log(desserTd.textContent)
+console.log(niveauTd.textContent)
 
-/*Ex2)3)vii)   */
 
-if (!document.newCommand.nom.checkValidity() ||
-      !document.newCommand.prenom.checkValidity() ||
-      !document.newCommand.adresse.checkValidity() ||
-      !document.newCommand.email.checkValidity()
+if (!document.inscription.nom.checkValidity() ||
+      !document.inscription.prenom.checkValidity() ||
+      !document.inscription.adresse.checkValidity() ||
+      !document.inscription.email.checkValidity()
      ) {
            return
     }
 
-// Ex2)3)iv)
 //const table = document.querySelector('table')
-newItem.append(nomTd, adresseTd, modeLivraisonTd, entreeTd, platTd, desserTd)
+newItem.append(nomTd,prenomTd, emailTd, telephoneTd, niveauTd, coursTd)
 
  /* le premier élément dans le document qui contient la classe "datatable" est retourné*/
 const table = document.querySelector('.datatable tbody')
-/*  Ex2)3)vi) */
+
 table.appendChild(newItem)
 
 }
 
 // supprimer toutes les lignes du tableau
-//ex2)3)viii)
+
 function supprimer() {
     const tbody = document.querySelector('.datatable tbody' )
     while (tbody.firstChild) {
@@ -189,6 +186,7 @@ function pause(ms)
 {
 return new Promise(resolve => setTimeout(resolve, ms));
 }
+
 //afficherDate();
 
 async function afficherDate() 
@@ -207,6 +205,5 @@ document.getElementById('dateheure').innerHTML = dateheure;
 }
 
 </script>
-
 
 </body>
