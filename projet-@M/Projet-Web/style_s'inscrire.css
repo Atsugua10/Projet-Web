@@ -2,10 +2,7 @@
  
   
   body{
-    background-image:url("projet21.jpg");
-    background-repeat: no-repeat;
-    background-size:500px 20em ;
-    background-position:center;
+    background-color: aliceblue;
     width: 1500px;
     font-family:"Trebuchet MS";
     font-size:small;
@@ -34,11 +31,9 @@ div{
     margin : 5%
 }
 
-h1{ 
+h1{
     text-align: center;
-    background-color:green;
-     color:yellow;
-
+    background-color: green
 }
 .cn{
     text-align: center;

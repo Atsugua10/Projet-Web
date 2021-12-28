@@ -9,14 +9,7 @@ div{
 }
 h1{ 
     text-align: center;
-    background-color:green;
-     color:yellow;
-
-}
-h2{ 
-    text-align: left;
-    color: green;
-   
+    background-color: green;
 }
 
 .cn{
@@ -68,10 +61,7 @@ h2{
 }
 
 body{
-    background-image:url("projet21.jpg");
-    background-repeat: no-repeat;
-    background-size:500px 20em ;
-    background-position:center;
+    background-color:white;
     width: 2000px;
     border: 3px solid black;
     margin: 0 auto;
