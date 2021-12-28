@@ -1,9 +1,10 @@
 body{
+    
+    background-color: white;
     background-image:url("projet21.jpg");
     background-repeat: no-repeat;
     background-size:500px 20em ;
     background-position: center;
-    /*background-color: white;*/
 
     width: 1950px 1000em;
     border: 3px solid black;
@@ -13,7 +14,8 @@ body{
 }
 
 .logo{
-    margin-top: initial;
+
+    margin-top:initial;
 }
 div{
     margin : 5%
@@ -29,7 +31,7 @@ h1{
 h3{
     text-align: center;
    /* background-color: green;*/
-    color:black;
+    color:green;
 }
 
 .cn{
@@ -64,3 +66,77 @@ h3{
      cursor: pointer;
      display: inline-block;
 }
+span.reference{
+    position:fixed;
+    left:15px;
+    bottom:10px;
+    font-size:12px;
+}
+span.reference a{
+    color:#aaa;
+    text-transform:uppercase;
+    text-decoration:none;
+    text-shadow:1px 1px 1px #000;
+    margin-right:30px;
+}
+span.reference a:hover{
+    color:#ddd;
+}
+
+ul.sdt_menu{
+    margin-top:150px;
+	margin: 0;
+	padding:0;
+	list-style: none;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
+	font-size:14px;
+	width:1040px;
+}
+ul.sdt_menu a{
+	text-decoration:#0B75AF;
+	outline:green;
+}
+ul.sdt_menu li{
+	float:left;
+	width:170px;
+	height:85px;
+	position:relative;
+	cursor:pointer;
+}
+ul.sdt_menu li > a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:170px;
+	height:85px;
+	z-index:12;
+    background-color: rgb(235, 243, 245);
+	-moz-box-shadow:0px 0px 2px #000 inset;
+	-webkit-box-shadow:0px 0px 2px #000 inset;
+	box-shadow:0px 0px 2px #000 inset;
+}
+
+ul.sdt_menu li span.sdt_wrap{
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:170px;
+	height:60px;
+	z-index:15;
+}
+
+ul.sdt_menu li span span.sdt_link,
+ul.sdt_menu li span span.sdt_descr,
+ul.sdt_menu li div.sdt_box a{
+	margin-left:15px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #000;
+}
+ul.sdt_menu li span span.sdt_link{
+	color: green;
+	font-size:24px;
+	float:left;
+	clear:both;
+}
+
+
