@@ -34,35 +34,21 @@ h3{
     color:green;
 }
 
-.cn{
-    text-align: center;
-    background-color: aquamarine;
-    text-align-last: center;
-}
-
-
-
-.container{
-    background-color : green;
-    display: inline-flex;
-    flex-flow:  row nowrap;
-}
-
 .item{
     background-color: white;
     padding : 20px;
     margin : 5px;
 }
 .style1{
-    /*line-height: 1;*/
-    padding: 20px 34px;
+    line-height: 2;
+    padding: 15px 24px;
      text-align: center;
      color: black;
      background-color: green;
      border-radius: 10px;
-     text-shadow: 1px 1px 1px;
-     position: relative;
-     left:50%;
+     text-shadow: 1px 1px;
+     position:static;
+     left:40%;
      cursor: pointer;
      display: inline-block;
 }
@@ -110,10 +96,35 @@ ul.sdt_menu li > a{
 	width:170px;
 	height:85px;
 	z-index:12;
-    background-color: rgb(235, 243, 245);
+    background:transparent url(projet2.jpg) no-repeat bottom right;
+    /*background-color: rgb(235, 243, 245);*/
 	-moz-box-shadow:0px 0px 2px #000 inset;
 	-webkit-box-shadow:0px 0px 2px #000 inset;
 	box-shadow:0px 0px 2px #000 inset;
+}
+ul.sdt_menu li > a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:170px;
+	height:85px;
+	z-index:12;
+	background:transparent url(../images/overlay.png) no-repeat bottom right;
+	-moz-box-shadow:0px 0px 2px #000 inset;
+	-webkit-box-shadow:0px 0px 2px #000 inset;
+	box-shadow:0px 0px 2px #000 inset;
+}
+ul.sdt_menu li a img{
+	border:none;
+	position:absolute;
+	width:0px;
+	height:0px;
+	bottom:0px;
+	left:85px;
+	z-index:100;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:0px 0px 4px #000;
 }
 
 ul.sdt_menu li span.sdt_wrap{
@@ -137,6 +148,29 @@ ul.sdt_menu li span span.sdt_link{
 	font-size:24px;
 	float:left;
 	clear:both;
+}
+ul.sdt_menu li div.sdt_box{
+	display:block;
+	position:absolute;
+	width:170px;
+	overflow:hidden;
+	height:170px;
+	top:85px;
+	left:0px;
+	display:none;
+	background:#000;
+}
+ul.sdt_menu li div.sdt_box a{
+	float:left;
+	clear:both;
+	line-height:30px;
+	color:#0B75AF;
+}
+ul.sdt_menu li div.sdt_box a:first-child{
+	margin-top:15px;
+}
+ul.sdt_menu li div.sdt_box a:hover{
+	color:#fff;
 }
 
 

@@ -1,4 +1,21 @@
-body{
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+     <meta charset = "utf-8">  
+     <link rel="stylesheet" href="style_Mon_compte.css"> 
+
+     <title> SERVICE </title>
+     <meta name="viewport" content="width=device-width">
+  </head>
+
+  <header > 
+   <img class="logo" src="logo.jpeg" alt="mon logo" height="150" width="180"  Align="left" Align="on top">
+ </header> 
+
+ <style>
+
+     body{
     background-image:url("projet21.jpg");
     background-repeat: no-repeat;
     background-size:500px 20em ;
@@ -20,28 +37,19 @@ h1{
     text-align: center;
     background-color:green;
          color:yellow;
-    font-size: 40px;
+    font-size:xx-large ;
     text-shadow: 3px 3px 1px black;
+}
+h2{
+         color:green;
+    font-size:xx-large ;
+   
 }
 
 .cn{
     text-align: center;
     background-color: aquamarine;
     text-align-last: center;
-}
-.style1{
-   
-    line-height: 2;
-    padding: 15px 24px;
-     text-align: center;
-     color: black;
-     background-color: green;
-     border-radius: 10px;
-     text-shadow: 1px 1px;
-     position:static;
-     left:40%;
-     cursor: pointer;
-     display: inline-block;
 }
 
 
@@ -165,8 +173,75 @@ ul.sdt_menu li div.sdt_box a:first-child{
 ul.sdt_menu li div.sdt_box a:hover{
 	color:#fff;
 }
+
 .item{
     background-color: white;
     padding : 20px;
     margin : 5px;
 }
+ </style>
+
+  <body>
+     
+   <br><br>
+   <ul id="sdt_menu" class="sdt_menu">
+       <li>
+           <a href="Accueil.html">
+                   <img src="projet2.jpg" alt=""/>
+                 <span class="sdt_active"></span>
+                 <span class="sdt_wrap">
+                   <span class="sdt_link">Accueil</span>
+                   <span class="sdt_descr"> REJOIGNEZ-NOUS</span>
+               </span>
+           </a>
+       </li>
+       <li>
+           <a href="Connexion.html">
+               <span class="sdt_wrap">
+                   <span class="sdt_link">Connexion</span>
+                    <span class="sdt_descr"> S'INSCRIRE
+               </span>
+           </a>
+       </li>
+       <li>
+           <a href="services.html">
+               <span class="sdt_wrap">
+                   <span class="sdt_link">Services</span>
+               </span>
+           </a>
+       </li>
+       <li>
+           <a href="A_propos_de_nous.html">
+               <span class="sdt_wrap">
+                   <span class="sdt_link">A propos</span>
+               </span>
+           </a>
+           
+   </ul>
+   <br><br><br><br><br><br><br><br><br>
+      
+     <h1> Des questions?</h1>
+     <br><br><br><br><br><br><br> 
+     <div class="container">
+     <h2> Posez vos questions ici</h2>
+     <br><br>
+
+     <form>
+     <textarea cols="50" rows="10" wrap="hard"> Vos questions!</textarea>
+     <br><br><br><br>
+
+     <p> 
+        <button type="submit" class="btn" onclick="reinit()">Envoyer</button>
+        <button type="submit" class="btn"  onclick="reinit()">Annuler</button>
+    </form>
+</div>
+  </body>
+  <script>
+
+    function reinit() 
+    {
+    document.getElementsByName("message")[0].value = "";
+    }
+  </script>
+
+</html>
