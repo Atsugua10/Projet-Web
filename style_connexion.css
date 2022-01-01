@@ -36,7 +36,7 @@ h2{
         padding: 20px 34px;
      text-align: center;
      color: black;
-     background-color: yellow;
+     background-color: skyblue;
      border-radius: 10px;
      text-shadow: 1px 1px 1px;
      position: relative;
@@ -46,29 +46,15 @@ h2{
      border-color: black;
 
 }
-.style2{
-        /*line-height: 1;*/
-        padding: 20px 34px;
-         text-align: center;
-         color: black;
-         background-color: yellow;
-         border-radius: 10px;
-         text-shadow: 1px 1px 1px;
-         position: relative;
-         left:5%;
-         cursor: pointer;
-         display: inline-block;
-         border-color: black;
-    
-}
-
 
 body{
     background-image:"R.jfif";
     background-repeat: no-repeat;
     background-size:500px 20em ;
     background-position:center;
-    width: 2000px;
+
+
+    width: 1950px 1000em;
     border: 3px solid black;
     margin: 0 auto;
     padding : 20px 20px 20px 20px 
@@ -192,6 +178,23 @@ ul.sdt_menu li div.sdt_box a:first-child{
 }
 ul.sdt_menu li div.sdt_box a:hover{
 	color:#fff;
+}
+
+footer{
+    background-color:rgb(58, 51, 51);
+    color:yellow;
+    position:initial;
+    width: 100%;
+    padding-top: 50px;
+    height:50px;
+    text-align: center;
+}
+.style3{
+    color:white;
+    text-align: center;
+    text-decoration:wavy;
+    line-height: 0;
+    font-size: 20px;
 }
 
     

@@ -172,5 +172,21 @@ ul.sdt_menu li div.sdt_box a:first-child{
 ul.sdt_menu li div.sdt_box a:hover{
 	color:#fff;
 }
+footer{
+    background-color:rgb(58, 51, 51);
+    color:yellow;
+    position:initial;
+    width: 100%;
+    padding-top: 50px;
+    height:50px;
+    text-align: center;
+}
+.style2{
+    color:white;
+    text-align: center;
+    text-decoration:wavy;
+    line-height: 0;
+    font-size: 20px;
+}
 
 

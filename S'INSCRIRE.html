@@ -50,8 +50,7 @@
             </a>
             
     </ul>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br>
+    <br><br><br><br><br><br><br><br><br><br>
         
             
      <header>
@@ -61,7 +60,8 @@
 
         <form name="inscription" action="#" class="box" id="formulaire d'inscription" onsubmit="return false">  
             
-             <h2><strong>Coordonnées</strong></h2>
+            <div>
+                <h2><strong>Coordonnées</strong></h2>
              
 
                  <input type="text" name="nom" placeholder="Nom" required><br><br>
@@ -94,11 +94,12 @@
                     <input type="radio" name="paiement">Anglais
                     <input type="radio" name="paiement">Francais
              
-
+    </div>
             <br><br><br>
             <h2><b><strong> choix des cours</strong> </b></h2>
 
-            <label for="Niveau"> <br> <b><strong>Niveau :</strong>  </b></label>
+           <div>
+                <label for="Niveau"> <br> <b><strong>Niveau :</strong>  </b></label>
             <select> 
                 <option>L1 </option>
                 <option>L2 </option>
@@ -133,10 +134,10 @@
                 <button type="reset"  class="btn" onclick="annuler()">Annuler</button>
                 <br><br>
                 <!--<button type="button" class="btn"  onclick="afficherDate()">Date et Heure</button> -->
-            
+            </div> 
     </form>
  </header>
- <main>
+ <body>
     <div class="box">
          
         <table class="datatable">
@@ -150,16 +151,20 @@
               <th>Cours</th>
             </tr>
         </thead>
-          <tbody>
-          </tbody>
         </table>
       </div>
 
-</main>
+      <footer>
+        <a href="A_propos_de_nous.html" class= "style"> A propos </a>
+       </footer>
+
+    </body>
 <script>
-
-var inscriptionForm = document.forms.inscription; 
-
+ 
+function annuler() 
+    {
+    document.getElementsByName("message")[0].value = "";
+    }
 
 function ajouter(){
 //alert(newCommandForm.elements.prenom.value)

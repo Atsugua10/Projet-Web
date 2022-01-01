@@ -3,10 +3,11 @@ body{
     background-repeat: no-repeat;
     background-size:500px 20em ;
     background-position:center;
-    width: 1500px;
+    width: 1950px 1000em;
     border: 3px solid black;
     margin: 0 auto;
-    padding : 20px 20px 20px 20px 20px
+    padding : 20px 20px 20px 20px;
+    
     
 }
 .logo{
@@ -169,4 +170,20 @@ ul.sdt_menu li div.sdt_box a:hover{
     background-color: white;
     padding : 20px;
     margin : 5px;
+}
+footer{
+    background-color:rgb(58, 51, 51);
+    color:yellow;
+    position:initial;
+    width: 100%;
+    padding-top: 50px;
+    height:50px;
+    text-align: center;
+}
+.style2{
+    color:white;
+    text-align: center;
+    text-decoration:wavy;
+    line-height: 0;
+    font-size: 20px;
 }
