@@ -44,6 +44,11 @@ h1{
      cursor: pointer;
      display: inline-block;
 }
+h3 span{background: green;}
+h2{
+    color:green;
+    text-size-adjust: 15px;
+}
 
 
 span.reference{
