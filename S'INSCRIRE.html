@@ -5,6 +5,7 @@
         
         <link rel="stylesheet" href="style_s'inscrire.css">
         <link rel="stylesheet" href="style_connexion.css"> 
+        <script src="s'inscrire.js"></script>
        
        <meta name="viewport" content="width=device-width">
     </head>
@@ -13,9 +14,10 @@
     <header > 
         <img class="logo" src="logo.jpeg" alt="mon logo" height="150" width="180"  Align="left" Align="on top">
     </header> 
+
     <body>
        
-        <br><br>
+    <br><br>
     <ul id="sdt_menu" class="sdt_menu">
         <li>
             <a href="Accueil.html">
@@ -58,7 +60,7 @@
              
          <h1>S'inscrire</h1>
 
-        <form name="inscription" action="#" class="box" id="formulaire d'inscription" onsubmit="return false">  
+        <form name="inscription" action="#" class="box" id="formulaire d'inscription" onsubmit="return false" action="checkPw()">  
             
             <div>
                 <h2><strong>Coordonnées</strong></h2>
@@ -72,10 +74,10 @@
             
                 <input type="email" name="email" placeholder="Email" required><br><br>
 
-                <input type="password" name="mot de passe" placeholder="mot de passe" required><br><br>
+                <input type="password" name="mot-de-passe" placeholder="mot de passe" required><br><br>
                 <br> <b><strong>Confirmez votre mot de passe:</strong> 
 
-                <input type="password" name="mot de passe" placeholder="mot de passe" required><br><br>
+                <input type="password" name="mot-de-passe2" placeholder="mot de passe" required><br><br>
 
                
              
@@ -125,7 +127,8 @@
             <input type="checkbox"  id="cript" name="cripto" >
             <label for="Criptographie"> Criptographie</label>
             <br>
-
+            <input type="checkbox"  id="opt" name="opti" >
+            <label for="Optimisation"> Optimisation lineaire</label>
 
             <br>
             <p> 
@@ -137,6 +140,7 @@
             </div> 
     </form>
  </header>
+
  <body>
     <div class="box">
          
@@ -152,100 +156,16 @@
             </tr>
         </thead>
         </table>
-      </div>
+   </div>
 
-      <footer>
+       <footer>
         <a href="A_propos_de_nous.html" class= "style"> A propos </a>
+        <br>
+     © 2021 <a href="#" class="stylelink" >Efrei</a>
+     <br> <a href="#" class="stylelink">Mentions legales</a> | <a href="#" class="stylelink">Politique de confidentialite</a>
+      
+    <br>
        </footer>
 
     </body>
-<script>
- 
-function annuler() 
-    {
-    document.getElementsByName("message")[0].value = "";
-    }
-
-function ajouter(){
-//alert(newCommandForm.elements.prenom.value)
-
-console.log(inscriptionForm.elements.nom.value)
-console.log(inscriptionForm.elements.adresse.value)
-
-const newItem = document.createElement('tr')
-const nomTd = document.createElement('td')
-const prenomTd = document.createElement('td')
-const emailTd = document.createElement('td')
-const telephoneTd = document.createElement('td')
-const niveauTd = document.createElement('td')
-const coursTd = document.createElement('td')
-
-nomTd.textContent = document.inscription.nom.value
-prenomTd.textContent = document.inscription.prenom.value
-emailTd.textContent = document.inscription.email.value
-telephoneTd.textContent = document.inscription.telephone.value
-niveauId.textContent = document.inscription.niveau.value
-cours_choisiId.textContent = document.inscription.cours_choisi.value
-
-//const selectEntree = document.getElementById("entreeId");
-//const valeurselectionnee = selectEntree.options[selectEntree.selectedIndex].value;
-//const textselectionne = selectEntree.options[selectEntree.selectedIndex].text;
-
-console.log(niveauTd.textContent)
-
-
-if (!document.inscription.nom.checkValidity() ||
-      !document.inscription.prenom.checkValidity() ||
-      !document.inscription.adresse.checkValidity() ||
-      !document.inscription.email.checkValidity()
-     ) {
-           return
-    }
-
-//const table = document.querySelector('table')
-newItem.append(nomTd,prenomTd, emailTd, telephoneTd, niveauTd, coursTd)
-
- /* le premier élément dans le document qui contient la classe "datatable" est retourné*/
-const table = document.querySelector('.datatable tbody')
-
-table.appendChild(newItem)
-
-}
-
-// supprimer toutes les lignes du tableau
-
-function supprimer() {
-    const tbody = document.querySelector('.datatable tbody' )
-    while (tbody.firstChild) {
-      tbody.removeChild(tbody.firstChild)
-    }
-
-}
-
-
-
-function pause(ms) 
-{
-return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-//afficherDate();
-
-async function afficherDate() 
-{
-while(true) 
-{
-await pause(1);
-var cejour = new Date();
-var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
-var date = cejour.toLocaleDateString("fr-FR", options);
-var heure = ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
-var dateheure = date + " " + heure;
-var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
-document.getElementById('dateheure').innerHTML = dateheure;
-}
-}
-
-</script>
-
 </body>

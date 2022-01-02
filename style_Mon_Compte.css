@@ -3,7 +3,7 @@ body{
     background-repeat: no-repeat;
     background-size:500px 20em ;
     background-position:center;
-    
+
     width: 1950px 1000em;
     border: 3px solid black;
     margin: 0 auto;
@@ -165,7 +165,7 @@ footer{
     position:initial;
     width: 100%;
     padding-top: 50px;
-    height:50px;
+    height:65px;
     text-align: center;
 }
 .style2{
@@ -174,4 +174,7 @@ footer{
     text-decoration:wavy;
     line-height: 0;
     font-size: 20px;
+}
+.stylelink{
+    color:white;
 }
